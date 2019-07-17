@@ -12,6 +12,9 @@ app.get("/about", function(req, res){
 
 });
 
-app.listen(3010, process.env.IP)
-    console.log("started");
+const port = process.env.PORT || 3000;
 
+app.listen(port, () => {
+    console.log("Server listen on Port: ", port,)
+});
+   
